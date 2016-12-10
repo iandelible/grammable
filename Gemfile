@@ -4,6 +4,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'simple_form'
 gem 'devise'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem "figaro"
+gem "fog"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
