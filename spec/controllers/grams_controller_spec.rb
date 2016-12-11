@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe GramsController, type: :controller do
 
   describe "grams#destroy action" do
-    
-    it "shouldn't allow users who didn't create the gram to destroy it" do 
+
+    it "shouldn't allow users who didn't create the gram to destroy it" do
       gram = FactoryGirl.create(:gram)
       user = FactoryGirl.create(:user)
       sign_in user
-      
+
       delete :destroy, id: gram.id
       expect(response).to have_http_status(:forbidden)
     end
@@ -161,7 +161,7 @@ RSpec.describe GramsController, type: :controller do
         message: 'Hello!',
         picture: fixture_file_upload("/lightbulb.png", 'image/png')
       }
-      
+
       expect(response).to redirect_to root_path
 
       gram = Gram.last
